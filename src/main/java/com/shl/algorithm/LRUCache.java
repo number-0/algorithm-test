@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
 /**
+ * LinkedHashMap实现
  * @author songhengliang
  * @date 2021/1/12
  */
@@ -31,13 +32,13 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
     }
 
     @Override
-    public V put(K key, V value) {
+    public synchronized V put(K key, V value) {
         super.put(key, value);
         return value;
     }
 
     @Override
-    public V get(Object key) {
+    public synchronized V get(Object key) {
         return super.get(key);
     }
 
