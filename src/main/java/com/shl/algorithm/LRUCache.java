@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
 /**
- * LinkedHashMap实现
+ * LRU：LinkedHashMap实现
  * @author songhengliang
  * @date 2021/1/12
  */
