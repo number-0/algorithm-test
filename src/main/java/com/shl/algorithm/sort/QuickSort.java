@@ -1,6 +1,7 @@
 package com.shl.algorithm.sort;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -16,12 +17,12 @@ public class QuickSort {
 
         //测试快排的执行速度
         // 创建要给80000个的随机的数组
-        int[] arr = new int[8000000];
-        for (int i = 0; i < 8000000; i++) {
-            arr[i] = (int) (Math.random() * 8000000); // 生成一个[0, 8000000) 数
+        int[] arr = new int[8];
+        for (int i = 0; i < 8; i++) {
+            arr[i] = (int) (Math.random() * 8); // 生成一个[0, 8000000) 数
         }
 
-        System.out.println("排序前");
+        System.out.println("排序前: " + Arrays.toString(arr));
         Date data1 = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String date1Str = simpleDateFormat.format(data1);
@@ -32,7 +33,7 @@ public class QuickSort {
         Date data2 = new Date();
         String date2Str = simpleDateFormat.format(data2);
         System.out.println("排序后的时间是=" + date2Str);
-        //System.out.println("arr=" + Arrays.toString(arr));
+        System.out.println("arr=" + Arrays.toString(arr));
     }
 
     public static void quickSort(int[] arr, int left, int right) {
